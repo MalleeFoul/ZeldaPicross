@@ -290,7 +290,7 @@ const char *  SDL_GetError();
 #define SDLK_RETURN	KEY_A
 #define SDLK_w		KEY_A
 #define SDLK_x		KEY_B
-#define SDLK_h		0//KEY_B
+#define SDLK_h		KEY_Y
 #define SDLK_ENTER	0//KEY_A//KEY_START
 #define SDLK_d 		0//KEY_SELECT
 #define SDLK_LEFT	KEY_LEFT
