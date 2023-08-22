@@ -15,10 +15,8 @@ jobs:
         name: devkitpro
         keys: BC26F752D25B92CE272E0F44F7FD5492264BB9D0
         key-server: keyserver.ubuntu.com
-        install: 3ds
+        install: 3ds-portlibs 3ds-dev 3ds-sdl-libs
     - uses: actions/checkout@v3
-    - name: configure
-      run: ./configure
     - name: make
       run: make
     - name: make check
