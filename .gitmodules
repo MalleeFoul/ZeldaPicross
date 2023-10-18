@@ -1,0 +1,8 @@
+[submodule "sfillib"]
+	path = sfillib
+	url = https://github.com/acmiyaguchi/sfillib.git
+	branch = latest
+[submodule "sf2dlib"]
+	path = sf2dlib
+	url = https://github.com/acmiyaguchi/sf2dlib.git
+	branch = latest
