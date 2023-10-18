@@ -1,0 +1,34 @@
+name: Makefile CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: myci-actions/add-pacman-repo@7
+      with:
+        url: https://pkg.devkitpro.org/packages
+        name: devkitpro
+        install: 3ds 
+    
+    - uses: actions/checkout@v3
+
+    - name: configure sfillib
+      run: make -C sfil*/lib*
+      run: make install
+
+    - name: Install dependencies
+      run: make
+
+    - name: Run check
+      run: make check
+
+    - name: Run distcheck
+      run: make distcheck
